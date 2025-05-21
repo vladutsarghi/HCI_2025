@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Cockpit Screen: HCI Documentation</title>
+   <style>
+    body { font-family: sans-serif; margin: 2rem; line-height: 1.6; }
+    h1, h2, h3 { color: #222; }
+    figure { margin: 1rem 0; }
+    img { max-width: 300px; height: auto; display: block; margin: 0.5rem 0; }
+    figcaption { font-size: 0.9rem; color: #555; }
+    nav { background: #f4f4f4; padding: 1rem; margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; text-decoration: none; color: #007acc; }
+    section { margin-bottom: 3rem; }
+    .pattern { border-left: 4px solid #007acc; padding-left: 1rem; margin: 1rem 0; }
+    .decision { border-left: 4px solid #cc7000; padding-left: 1rem; margin: 1rem 0; }
+    .manual-step { margin: 0.5rem 0; }
+    footer { font-size: 0.8rem; color: #777; border-top: 1px solid #ddd; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interaction Design & User Manual for F1 Steering-Wheel Display</h1>
+    <p><em>Author:</em> [Popescu Mara, Sarghi Vladut]</p>
+  </header>
+
+  <nav>
+    <a href="#abstract">Abstract</a>
+    <a href="#patterns">Design Patterns</a>
+    <a href="#decisions">Design Decisions</a>
+    <a href="#manual">User Manual</a>
+  </nav>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>This document presents the human–computer interaction (HCI) design for the central display on a Formula 1 steering wheel, covering interaction design patterns, rationale behind design decisions, and a concise user manual for drivers.</p>
+  </section>
+
+  <section id="patterns">
+    <h2>Interaction Design Patterns</h2>
+    <article class="pattern">
+      <h3>1. Real-Time Dashboard</h3>
+      <p>Displays critical telemetry (speed, gear, lap time) with high-contrast numbers. Uses color coding to indicate safe (white), caution (yellow), and danger (red) states.</p>
+       <figure>
+        <img src="./1.jpg" alt="Six sample dashboard layouts showing speed, gear, warnings">
+        <figcaption>Figure 1: Sample dashboard layouts for speed, gear, and alerts.</figcaption>
+      </figure>
+    </article>
+
+    <article class="pattern">
+      <h3>2. Mini‑Map Navigation</h3>
+      <p>A top-left track map shows current position and upcoming turn, providing glanceable navigation cues.</p>
+      
+    </article>
+
+
+
+    <article class="pattern">
+      <h3>3. Weather and track conditions</h3>
+      <p>A page dedicated for the weather which indicates where exactly the rain clouds are, also in the top left indicating the speed level and the direction of the wind and in the center-bottom an AI recomandation for the best tyre for the track conditions</p>
+        <figure>
+        <img src="./weather.png" alt="On-track view with mini-map and warning icon">
+        <figcaption>Figure 2: Live weather forecast.</figcaption>
+      </figure>
+    </article>
+
+    <article class="pattern">
+      <h3>4. Alert & Acknowledgment</h3>
+      <p>Visual warning which pop up when an error appears.</p>
+      <figure>
+        <img src="./alert.png" alt="On-track view with mini-map and warning icon">
+        <figcaption>Figure 3: In-context view with mini-map and hazard alert.</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section id="decisions">
+    <h2>Design Decisions</h2>
+    <div class="decision">
+      <h3>Color choices</h3>
+      <p>Color choices align with the general color theme of Formula1 for an easier transition to a new display.</p>
+    </div>
+
+    <div class="decision">
+      <h3>Minimalist Layout</h3>
+      <p>Prioritized only essential information to reduce cognitive load. Complex settings (brake bias, engine modes) moved to rotary dials around the display.</p>
+    </div>
+
+    <div class="decision">
+      <h3>Color of the team</h3>
+      <p>Used the pricipal color of the team but keeping in mind the needed for contrast.</p>
+      <figure>
+        <img src="./1.jpg" alt="Six sample dashboard layouts showing speed, gear, warnings">
+      </figure>
+      <figure>
+        <img src="./ferrari.jpg" alt="Six sample dashboard layouts showing speed, gear, warnings">
+      </figure>
+    </div>
+  </section>
+
+  <section id="manual">
+    <h2>User Manual</h2>
+    <p>The following steps guide drivers in interpreting and interacting with the steering‑wheel display:</p>
+    <ol>
+      <li class="manual-step"><strong>Startup Self‑Test:</strong> After ignition, the display cycles through segments. Confirm that all segments illuminate; if a segment is missing, pit crew intervention is required.</li>
+      <li class="manual-step"><strong>Reading Telemetry:</strong> 
+        <ul>
+          <li><em>Center:</em> Current speed in km/h.</li>
+          <li><em>Upper-right:</em> Selected gear.</li>
+          <li><em>Lower-left:</em> Lap time delta (+/- from best).</li>
+        </ul>
+      </li>
+      <li class="manual-step"><strong>Navigating Modes:</strong> The driver has 2 different possibilities to navigate beetween the pages either with a little slide or with a button.</li>
+    </ol>
+  </section>
+
+  
+
+  <footer>
+    <p>&copy; [Year] [Your Team/Organization]. All rights reserved.</p>
+  </footer>
+</body>
+</html>
